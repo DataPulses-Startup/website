@@ -35,10 +35,14 @@ body{
 .logo{
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:12px;
 }
 
-.logo img{height:26px;}
+.logo img{
+  height:34px;
+  width:auto;
+  display:block;
+}
 
 .logo span{
   font-size:13px;
@@ -63,11 +67,6 @@ body{
   cursor: pointer;
 }
 
-.dropbtn:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
-}
-
 .dropdown-content {
   display: none;
   position: absolute;
@@ -77,7 +76,6 @@ body{
   border: 1px solid #1f2937;
   border-radius: 10px;
   min-width: 180px;
-  z-index: 2000;
 }
 
 .dropdown-content a {
@@ -102,7 +100,6 @@ body{
   max-width:900px;
   margin:0 auto;
   padding:120px 24px 60px;
-  text-align:left;
 }
 
 /* HERO */
@@ -111,11 +108,10 @@ body{
 }
 
 .hero h1{
-  font-size:40px;
+  font-size:38px;
   margin:0 0 14px 0;
   font-weight:500;
-  line-height:1.2;
-  letter-spacing:-0.3px;
+  line-height:1.25;
 }
 
 .hero h1 span{
@@ -143,11 +139,6 @@ body{
   font-size:13px;
   font-weight:500;
   text-decoration:none;
-  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
-}
-
-.btn:hover{
-  transform: translateY(-1px);
 }
 
 .primary{
@@ -167,13 +158,24 @@ body{
   color:#3b82f6;
 }
 
+/* TRUST */
+.trust{
+  margin-top:26px;
+  padding:14px;
+  border:1px solid #1f2937;
+  border-radius:10px;
+  color:#9ca3af;
+  font-size:13px;
+  line-height:1.5;
+}
+
 /* SECTIONS */
 section{
   margin-top:70px;
 }
 
 h2{
-  font-size:16px;
+  font-size:14px;
   font-weight:600;
   margin-bottom:16px;
 }
@@ -190,24 +192,38 @@ h2{
   border:1px solid #1f2937;
   border-radius:10px;
   padding:16px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.card:hover{
-  transform: translateY(-4px);
-  border-color:#334155;
 }
 
 .card h3{
   font-size:14px;
   margin:0 0 6px 0;
-  font-weight:500;
 }
 
 .card p{
   font-size:13px;
   color:#9ca3af;
   margin:0;
+  line-height:1.5;
+}
+
+/* CASE STUDY */
+.case{
+  background:#0f172a;
+  border:1px solid #1f2937;
+  border-radius:12px;
+  padding:18px;
+  margin-top:14px;
+}
+
+.case h3{
+  margin:0 0 6px 0;
+  font-size:14px;
+}
+
+.case p{
+  margin:0;
+  font-size:13px;
+  color:#9ca3af;
   line-height:1.5;
 }
 
@@ -241,7 +257,6 @@ button{
   color:white;
   font-weight:500;
   cursor:pointer;
-  font-size:13px;
 }
 
 button:hover{background:#2563eb;}
@@ -258,45 +273,21 @@ button:hover{background:#2563eb;}
   font-size:13px;
   font-weight:600;
   text-decoration:none;
-  z-index:2000;
-  transition: transform 0.2s ease;
-}
-
-.wa:hover{
-  transform: scale(1.05);
 }
 
 /* FOOTER */
 footer{
-  text-align:left;
-  padding:60px 24px 30px;
+  margin-top:60px;
   color:#6b7280;
   font-size:11px;
-  max-width:900px;
-  margin:auto;
 }
 
-/* REVEAL ANIMATION */
-.reveal{
-  opacity:0;
-  transform: translateY(14px);
-  transition: all 0.6s ease;
-}
-
-.reveal.visible{
-  opacity:1;
-  transform: translateY(0);
-}
-
-html{
-  scroll-behavior:smooth;
-}
+html{scroll-behavior:smooth;}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <div class="nav">
 
   <div class="logo">
@@ -306,9 +297,9 @@ html{
 
   <div class="dropdown">
     <button class="dropbtn">Menu ▾</button>
-
     <div class="dropdown-content">
       <a href="#services">How we work</a>
+      <a href="#cases">Case studies</a>
       <a href="#audit">Request review</a>
     </div>
   </div>
@@ -317,48 +308,76 @@ html{
 
 <div class="container">
 
-  <!-- HERO -->
-  <div class="hero reveal">
+  <div class="hero">
     <h1>
-      Improve marketing performance through <span>clearer decision-making.</span>
+      Turn local advertising into <span>consistent customers and bookings.</span>
     </h1>
 
     <p>
-      We help businesses understand what is affecting their marketing outcomes and improve how budgets are allocated based on measurable performance signals.
+      We help local businesses understand what drives real enquiries, fix tracking gaps, and improve how Google and Meta ads generate revenue instead of wasted spend.
     </p>
 
     <div class="cta">
       <a class="btn primary" href="#audit">Request Audit</a>
-      <a class="btn secondary" href="#services">Overview</a>
+
+      <!-- CLICK TO CALL READY -->
+      <a class="btn secondary" href="tel:+61413303718">
+        Call now
+      </a>
+    </div>
+
+    <div class="trust">
+      Built for service-based businesses that rely on calls, bookings, and direct enquiries.
     </div>
   </div>
 
-  <!-- HOW WE WORK -->
-  <section id="services" class="reveal">
+  <!-- SERVICES -->
+  <section id="services">
     <h2>How we work with clients</h2>
 
     <div class="grid">
 
       <div class="card">
-        <h3>Diagnostic Review</h3>
-        <p>We assess your current marketing performance and identify structural inefficiencies affecting results.</p>
+        <h3>Tracking Audit</h3>
+        <p>We identify missing or broken tracking across ads and website.</p>
       </div>
 
       <div class="card">
-        <h3>Performance Clarity</h3>
-        <p>We clarify what is actually driving conversions and where budget is being misallocated.</p>
+        <h3>Lead Clarity</h3>
+        <p>We show which campaigns actually generate calls and enquiries.</p>
       </div>
 
       <div class="card">
-        <h3>Growth Alignment</h3>
-        <p>We align marketing activity with measurable business outcomes and revenue impact.</p>
+        <h3>Revenue Optimization</h3>
+        <p>We improve campaign structure to increase booked jobs.</p>
       </div>
 
     </div>
   </section>
 
+  <!-- CASE STUDIES -->
+  <section id="cases">
+    <h2>Case studies</h2>
+
+    <div class="case">
+      <h3>Local Service Business (Brisbane)</h3>
+      <p>
+        Identified missing conversion tracking and misaligned campaign structure.
+        Result: clearer attribution of leads and improved budget allocation decisions.
+      </p>
+    </div>
+
+    <div class="case">
+      <h3>Trade Business (QLD)</h3>
+      <p>
+        Rebuilt tracking foundation and clarified which ads were producing qualified enquiries vs noise traffic.
+      </p>
+    </div>
+
+  </section>
+
   <!-- AUDIT -->
-  <section id="audit" class="reveal">
+  <section id="audit">
     <h2>Request Advisory Review</h2>
 
     <div class="audit">
@@ -368,10 +387,9 @@ html{
         <input type="text" name="name" placeholder="Name" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="business" placeholder="Business type">
+        <textarea name="message" rows="4" placeholder="Current marketing situation"></textarea>
 
-        <textarea name="message" rows="4" placeholder="Context"></textarea>
-
-        <button type="submit">Submit</button>
+        <button type="submit">Request Review</button>
 
       </form>
 
@@ -380,28 +398,16 @@ html{
 
 </div>
 
+<!-- WHATSAPP PREFILLED -->
 <a class="wa"
-   href="https://wa.me/61413303718"
+   href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20would%20like%20a%20free%20marketing%20audit."
    target="_blank">
-   WhatsApp
+  WhatsApp
 </a>
 
 <footer>
   © 2026 Data Pulses
 </footer>
-
-<!-- SCROLL REVEAL -->
-<script>
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("visible");
-    }
-  });
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
-</script>
 
 </body>
 </html>
