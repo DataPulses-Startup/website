@@ -15,57 +15,101 @@ body{
   color:#e5e7eb;
 }
 
+/* LAYOUT */
 .container{
-  max-width:800px;
+  max-width:760px;
   margin:auto;
-  padding:120px 24px;
+  padding:110px 24px;
 }
 
-h1{font-size:34px;margin-bottom:10px;}
-p{color:#9ca3af;line-height:1.6;}
+/* TYPO */
+h1{
+  font-size:34px;
+  margin:0 0 8px;
+  letter-spacing:-0.3px;
+}
 
+p{
+  color:#9ca3af;
+  line-height:1.6;
+  margin:0;
+}
+
+/* CARD */
 .box{
-  margin-top:30px;
+  margin-top:28px;
   background:#0f172a;
   border:1px solid #1f2937;
-  border-radius:12px;
+  border-radius:14px;
   padding:18px;
 }
 
-a.btn{
-  display:block;
-  margin-top:10px;
-  padding:12px;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:13px;
-  text-align:center;
-  font-weight:500;
-}
-
-.wa{background:#22c55e;color:#000;}
-.li{border:1px solid #60a5fa;color:#60a5fa;}
-.ig{border:1px solid #f472b6;color:#f472b6;}
-.mail{border:1px solid #334155;color:#cbd5e1;}
-
+/* FORM */
 input,textarea{
   width:100%;
   margin-top:10px;
-  padding:10px;
+  padding:12px;
   background:#0b0f14;
   border:1px solid #1f2937;
   color:white;
-  border-radius:8px;
+  border-radius:10px;
+  font-size:13px;
+  outline:none;
 }
 
+input:focus, textarea:focus{
+  border-color:#3b82f6;
+}
+
+/* BUTTON */
 button{
   width:100%;
-  margin-top:10px;
+  margin-top:12px;
   padding:12px;
   background:#3b82f6;
   border:none;
-  border-radius:8px;
+  border-radius:10px;
   color:white;
+  font-weight:500;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#2563eb;
+}
+
+/* SOCIAL ICON BAR */
+.socials{
+  display:flex;
+  gap:12px;
+  margin-top:6px;
+}
+
+.socials a{
+  width:42px;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:10px;
+  border:1px solid #1f2937;
+  color:#cbd5e1;
+  text-decoration:none;
+  font-size:12px;
+  transition:0.2s;
+}
+
+.socials a:hover{
+  border-color:#3b82f6;
+  color:#3b82f6;
+  transform:translateY(-2px);
+}
+
+/* LABEL */
+.label{
+  font-size:12px;
+  color:#6b7280;
+  margin-top:18px;
 }
 </style>
 </head>
@@ -74,40 +118,52 @@ button{
 
 <div class="container">
 
-<h1>Contact</h1>
-<p>Direct access for audit requests and business enquiries.</p>
+  <h1>Contact</h1>
+  <p>Direct access for audit requests and business enquiries.</p>
 
-<div class="box">
+  <!-- FORM -->
+  <div class="box">
 
-  <!-- FORM FUNZIONANTE -->
-  <form action="https://formspree.io/f/YOUR_ID" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Message"></textarea>
-    <button type="submit">Send Request</button>
-  </form>
+    <form action="https://formspree.io/f/maqgovay" method="POST">
 
-</div>
+      <input type="hidden" name="_subject" value="New Audit Request - Data Pulses">
 
-<div class="box">
+      <input type="text" name="name" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <textarea name="message" rows="4" placeholder="Describe your situation"></textarea>
 
-  <a class="btn wa" href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20an%20audit">
-    WhatsApp
-  </a>
+      <button type="submit">Request Audit</button>
 
-  <a class="btn li" href="https://linkedin.com">
-    LinkedIn
-  </a>
+    </form>
 
-  <a class="btn ig" href="https://instagram.com">
-    Instagram
-  </a>
+  </div>
 
-  <a class="btn mail" href="mailto:consulting@datapulses.com.au">
-    Email
-  </a>
+  <!-- SOCIALS -->
+  <div class="box">
 
-</div>
+    <div class="label">Connect directly</div>
+
+    <div class="socials">
+
+      <a href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20an%20audit" target="_blank">
+        WA
+      </a>
+
+      <a href="https://linkedin.com" target="_blank">
+        IN
+      </a>
+
+      <a href="https://instagram.com" target="_blank">
+        IG
+      </a>
+
+      <a href="mailto:consulting@datapulses.com.au">
+        @
+      </a>
+
+    </div>
+
+  </div>
 
 </div>
 
