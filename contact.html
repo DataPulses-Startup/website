@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact | Data Pulses</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+  margin:0;
+  font-family:Inter;
+  background:#0b0f14;
+  color:#e5e7eb;
+}
+
+.container{
+  max-width:800px;
+  margin:auto;
+  padding:120px 24px;
+}
+
+h1{font-size:34px;margin-bottom:10px;}
+p{color:#9ca3af;line-height:1.6;}
+
+.box{
+  margin-top:30px;
+  background:#0f172a;
+  border:1px solid #1f2937;
+  border-radius:12px;
+  padding:18px;
+}
+
+a.btn{
+  display:block;
+  margin-top:10px;
+  padding:12px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:13px;
+  text-align:center;
+  font-weight:500;
+}
+
+.wa{background:#22c55e;color:#000;}
+.li{border:1px solid #60a5fa;color:#60a5fa;}
+.ig{border:1px solid #f472b6;color:#f472b6;}
+.mail{border:1px solid #334155;color:#cbd5e1;}
+
+input,textarea{
+  width:100%;
+  margin-top:10px;
+  padding:10px;
+  background:#0b0f14;
+  border:1px solid #1f2937;
+  color:white;
+  border-radius:8px;
+}
+
+button{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  background:#3b82f6;
+  border:none;
+  border-radius:8px;
+  color:white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Contact</h1>
+<p>Direct access for audit requests and business enquiries.</p>
+
+<div class="box">
+
+  <!-- FORM FUNZIONANTE -->
+  <form action="https://formspree.io/f/YOUR_ID" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message"></textarea>
+    <button type="submit">Send Request</button>
+  </form>
+
+</div>
+
+<div class="box">
+
+  <a class="btn wa" href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20an%20audit">
+    WhatsApp
+  </a>
+
+  <a class="btn li" href="https://linkedin.com">
+    LinkedIn
+  </a>
+
+  <a class="btn ig" href="https://instagram.com">
+    Instagram
+  </a>
+
+  <a class="btn mail" href="mailto:consulting@datapulses.com.au">
+    Email
+  </a>
+
+</div>
+
+</div>
+
+</body>
+</html>
