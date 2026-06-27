@@ -40,8 +40,6 @@ body{
 
 .logo img{
   height:34px;
-  width:auto;
-  display:block;
 }
 
 .logo span{
@@ -97,18 +95,18 @@ body{
 
 /* LAYOUT */
 .container{
-  max-width:900px;
+  max-width:920px;
   margin:0 auto;
-  padding:120px 24px 60px;
+  padding:120px 24px 90px;
 }
 
 /* HERO */
 .hero{
-  padding-top:40px;
+  padding-top:30px;
 }
 
 .hero h1{
-  font-size:38px;
+  font-size:40px;
   margin:0 0 14px 0;
   font-weight:500;
   line-height:1.25;
@@ -121,7 +119,7 @@ body{
 .hero p{
   font-size:16px;
   color:#9ca3af;
-  max-width:720px;
+  max-width:760px;
   line-height:1.6;
 }
 
@@ -158,20 +156,26 @@ body{
   color:#3b82f6;
 }
 
-/* TRUST */
+/* TRUST STRIP */
 .trust{
-  margin-top:26px;
+  margin-top:22px;
   padding:14px;
   border:1px solid #1f2937;
   border-radius:10px;
   color:#9ca3af;
   font-size:13px;
-  line-height:1.5;
+}
+
+/* MICRO SOCIAL PROOF */
+.proof{
+  margin-top:14px;
+  font-size:12px;
+  color:#6b7280;
 }
 
 /* SECTIONS */
 section{
-  margin-top:70px;
+  margin-top:75px;
 }
 
 h2{
@@ -206,13 +210,13 @@ h2{
   line-height:1.5;
 }
 
-/* CASE STUDY */
+/* CASE STUDIES */
 .case{
   background:#0f172a;
   border:1px solid #1f2937;
   border-radius:12px;
   padding:18px;
-  margin-top:14px;
+  margin-bottom:12px;
 }
 
 .case h3{
@@ -224,7 +228,6 @@ h2{
   margin:0;
   font-size:13px;
   color:#9ca3af;
-  line-height:1.5;
 }
 
 /* FORM */
@@ -250,7 +253,7 @@ input, textarea{
 button{
   width:100%;
   margin-top:10px;
-  padding:11px;
+  padding:12px;
   background:#3b82f6;
   border:none;
   border-radius:8px;
@@ -261,7 +264,7 @@ button{
 
 button:hover{background:#2563eb;}
 
-/* WHATSAPP */
+/* WHATSAPP FLOAT */
 .wa{
   position:fixed;
   bottom:18px;
@@ -273,6 +276,41 @@ button:hover{background:#2563eb;}
   font-size:13px;
   font-weight:600;
   text-decoration:none;
+  z-index:1000;
+}
+
+/* STICKY CTA BAR */
+.sticky{
+  position:fixed;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#0f172a;
+  border-top:1px solid #1f2937;
+  display:flex;
+  gap:10px;
+  padding:10px;
+  z-index:2000;
+}
+
+.sticky a{
+  flex:1;
+  text-align:center;
+  padding:10px;
+  border-radius:8px;
+  font-size:13px;
+  text-decoration:none;
+  font-weight:500;
+}
+
+.call{
+  background:#3b82f6;
+  color:white;
+}
+
+.whats{
+  background:#22c55e;
+  color:#000;
 }
 
 /* FOOTER */
@@ -280,9 +318,15 @@ footer{
   margin-top:60px;
   color:#6b7280;
   font-size:11px;
+  padding-bottom:80px;
 }
 
 html{scroll-behavior:smooth;}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+  .grid{grid-template-columns:1fr;}
+}
 </style>
 </head>
 
@@ -300,7 +344,7 @@ html{scroll-behavior:smooth;}
     <div class="dropdown-content">
       <a href="#services">How we work</a>
       <a href="#cases">Case studies</a>
-      <a href="#audit">Request review</a>
+      <a href="#audit">Audit</a>
     </div>
   </div>
 
@@ -308,50 +352,49 @@ html{scroll-behavior:smooth;}
 
 <div class="container">
 
+  <!-- HERO -->
   <div class="hero">
     <h1>
-      Turn local advertising into <span>consistent customers and bookings.</span>
+      Turn local advertising into <span>predictable customer flow.</span>
     </h1>
 
     <p>
-      We help local businesses understand what drives real enquiries, fix tracking gaps, and improve how Google and Meta ads generate revenue instead of wasted spend.
+      We help service-based businesses fix tracking, understand acquisition performance, and turn ad spend into measurable booked jobs.
     </p>
 
     <div class="cta">
       <a class="btn primary" href="#audit">Request Audit</a>
-
-      <!-- CLICK TO CALL READY -->
-      <a class="btn secondary" href="tel:+61413303718">
-        Call now
-      </a>
+      <a class="btn secondary" href="tel:+61413303718">Call now</a>
     </div>
 
     <div class="trust">
-      Built for service-based businesses that rely on calls, bookings, and direct enquiries.
+      Focused on call-driven businesses: trades, clinics, gyms, and local services.
+    </div>
+
+    <div class="proof">
+      Tracking clarity • Lead attribution • Revenue-focused optimisation
     </div>
   </div>
 
   <!-- SERVICES -->
   <section id="services">
-    <h2>How we work with clients</h2>
+    <h2>How we work</h2>
 
     <div class="grid">
-
       <div class="card">
-        <h3>Tracking Audit</h3>
-        <p>We identify missing or broken tracking across ads and website.</p>
+        <h3>Tracking Diagnosis</h3>
+        <p>Identify gaps in attribution, pixels, and conversion tracking.</p>
       </div>
 
       <div class="card">
-        <h3>Lead Clarity</h3>
-        <p>We show which campaigns actually generate calls and enquiries.</p>
+        <h3>Lead Qualification</h3>
+        <p>Understand which campaigns generate real enquiries.</p>
       </div>
 
       <div class="card">
-        <h3>Revenue Optimization</h3>
-        <p>We improve campaign structure to increase booked jobs.</p>
+        <h3>Revenue Alignment</h3>
+        <p>Optimise campaigns based on booked jobs and revenue signals.</p>
       </div>
-
     </div>
   </section>
 
@@ -360,17 +403,16 @@ html{scroll-behavior:smooth;}
     <h2>Case studies</h2>
 
     <div class="case">
-      <h3>Local Service Business (Brisbane)</h3>
+      <h3>Service Business (QLD)</h3>
       <p>
-        Identified missing conversion tracking and misaligned campaign structure.
-        Result: clearer attribution of leads and improved budget allocation decisions.
+        Fixed tracking gaps and clarified campaign performance across channels, enabling better budget decisions.
       </p>
     </div>
 
     <div class="case">
-      <h3>Trade Business (QLD)</h3>
+      <h3>Local Operator (Brisbane)</h3>
       <p>
-        Rebuilt tracking foundation and clarified which ads were producing qualified enquiries vs noise traffic.
+        Improved visibility on lead sources and reduced wasted ad spend through structured attribution review.
       </p>
     </div>
 
@@ -378,7 +420,7 @@ html{scroll-behavior:smooth;}
 
   <!-- AUDIT -->
   <section id="audit">
-    <h2>Request Advisory Review</h2>
+    <h2>Request Review</h2>
 
     <div class="audit">
 
@@ -387,9 +429,9 @@ html{scroll-behavior:smooth;}
         <input type="text" name="name" placeholder="Name" required>
         <input type="email" name="email" placeholder="Email" required>
         <input type="text" name="business" placeholder="Business type">
-        <textarea name="message" rows="4" placeholder="Current marketing situation"></textarea>
+        <textarea name="message" rows="4" placeholder="Current situation"></textarea>
 
-        <button type="submit">Request Review</button>
+        <button type="submit">Submit request</button>
 
       </form>
 
@@ -398,12 +440,18 @@ html{scroll-behavior:smooth;}
 
 </div>
 
-<!-- WHATSAPP PREFILLED -->
+<!-- FLOAT WHATSAPP -->
 <a class="wa"
-   href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20would%20like%20a%20free%20marketing%20audit."
+   href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20a%20marketing%20audit"
    target="_blank">
   WhatsApp
 </a>
+
+<!-- STICKY CTA -->
+<div class="sticky">
+  <a class="call" href="tel:+61413303718">Call</a>
+  <a class="whats" href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20a%20marketing%20audit">WhatsApp</a>
+</div>
 
 <footer>
   © 2026 Data Pulses
