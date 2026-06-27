@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Free Audit | Data Pulses</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#0b0f14;
+  color:#e6e6e6;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
+}
+
+.logo{
+  font-weight:bold;
+  letter-spacing:2px;
+}
+
+.back{
+  color:#9ca3af;
+  text-decoration:none;
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+h1{
+  font-size:44px;
+  margin:0 0 10px 0;
+}
+
+h1 span{color:#3b82f6;}
+
+p{
+  color:#9ca3af;
+}
+
+.card{
+  background:#111827;
+  padding:25px;
+  border-radius:14px;
+  border:1px solid #1f2937;
+}
+
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  background:#0b0f14;
+  border:1px solid #1f2937;
+  color:white;
+  border-radius:8px;
+}
+
+button{
+  width:100%;
+  padding:12px;
+  background:#3b82f6;
+  border:none;
+  border-radius:8px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{background:#2563eb;}
+
+.links{
+  margin-top:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.link{
+  padding:12px;
+  text-align:center;
+  border-radius:8px;
+  text-decoration:none;
+  border:1px solid #374151;
+  color:#e6e6e6;
+}
+
+.wa{border-color:#22c55e;color:#22c55e;}
+.li{border-color:#60a5fa;color:#60a5fa;}
+
+.wa:hover{background:#22c55e;color:black;}
+.li:hover{background:#60a5fa;color:black;}
+
+@media(max-width:900px){
+  .layout{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="topbar">
+    <div class="logo">DATA PULSES</div>
+    <a class="back" href="index.html">← Back</a>
+  </div>
+
+  <div class="layout">
+
+    <!-- LEFT -->
+    <div>
+      <h1>Free <span>Tracking Audit</span></h1>
+      <p>
+        We analyse your tracking setup, identify missing events and show exactly what is costing you conversions.
+      </p>
+
+      <div class="card">
+        <h3>What you get</h3>
+        <p>• Full tracking audit</p>
+        <p>• Missing conversion events report</p>
+        <p>• Action plan to fix analytics</p>
+      </div>
+
+      <div class="links">
+        <a class="link wa" href="https://wa.me/614XXXXXXXX" target="_blank">
+          WhatsApp Us
+        </a>
+
+        <a class="link li" href="https://www.linkedin.com/in/YOUR-PROFILE" target="_blank">
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="card">
+
+      <h3>Request Audit</h3>
+
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Website">
+        <textarea rows="5" placeholder="Describe your business"></textarea>
+
+        <button type="submit">Get Free Audit</button>
+      </form>
+
+      <p style="font-size:12px;color:#6b7280;margin-top:10px;">
+        No spam. Only actionable insights.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
