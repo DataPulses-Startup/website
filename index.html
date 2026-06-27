@@ -13,6 +13,11 @@ body{
   color:#e6e6e6;
 }
 
+/* background upgrade */
+body{
+  background: radial-gradient(circle at top, #0b0f14, #070a0f);
+}
+
 .container{max-width:1100px;margin:auto;padding:60px 20px;}
 
 nav{
@@ -23,30 +28,56 @@ nav{
   border-bottom:1px solid #1f2937;
 }
 
-.logo{
-  font-weight:bold;
-  letter-spacing:2px;
+/* logo upgrade */
+.logo img{
+  height:28px;
 }
 
 .btn{
-  padding:10px 16px;
-  border:1px solid #3b82f6;
-  color:#3b82f6;
+  padding:12px 18px;
+  border-radius:8px;
   text-decoration:none;
-  border-radius:6px;
+  font-weight:600;
+  background:#3b82f6;
+  color:white;
+  border:none;
+  display:inline-block;
 }
 
-.btn:hover{background:#3b82f6;color:#fff;}
+.btn:hover{background:#2563eb;}
 
 .hero{
-  padding:80px 0;
+  padding:90px 0;
   text-align:left;
 }
 
-h1{font-size:52px;margin:0;}
+h1{font-size:54px;margin:0;}
 h1 span{color:#3b82f6;}
 
-p.sub{color:#9ca3af;font-size:18px;max-width:600px;}
+p.sub{
+  color:#9ca3af;
+  font-size:18px;
+  max-width:650px;
+  margin-top:15px;
+}
+
+.cta-row{
+  margin-top:25px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.secondary{
+  background:transparent;
+  border:1px solid #3b82f6;
+  color:#3b82f6;
+}
+
+.secondary:hover{
+  background:#3b82f6;
+  color:#fff;
+}
 
 .grid{
   display:grid;
@@ -56,10 +87,21 @@ p.sub{color:#9ca3af;font-size:18px;max-width:600px;}
 }
 
 .card{
-  background:#111827;
+  background:rgba(17,24,39,0.85);
   padding:20px;
   border-radius:12px;
   border:1px solid #1f2937;
+  backdrop-filter: blur(10px);
+}
+
+.card h3{
+  margin-top:0;
+}
+
+.micro{
+  font-size:12px;
+  color:#6b7280;
+  margin-top:10px;
 }
 
 footer{
@@ -74,36 +116,51 @@ footer{
 <body>
 
 <nav>
-  <div class="logo">DATA PULSES</div>
+  <div class="logo">
+    <img src="logo.png" alt="Data Pulses">
+  </div>
+
   <a class="btn" href="audit.html">Free Audit</a>
 </nav>
 
 <div class="container">
 
   <div class="hero">
-    <h1>Track. Analyze. <span>Grow.</span></h1>
+
+    <h1>Fix your tracking. <span>Stop losing conversions.</span></h1>
+
     <p class="sub">
-      We help Australian businesses implement proper tracking systems and run data-driven ad campaigns that increase conversions and ROI.
+      We help Australian businesses implement proper tracking systems (GA4, GTM, Meta Pixel) and fix broken attribution that silently kills ad performance.
     </p>
 
-    <a class="btn" href="audit.html">Get Free Tracking Audit</a>
+    <div class="cta-row">
+      <a class="btn" href="audit.html">Get Free Tracking Audit</a>
+      <a class="btn secondary" href="https://wa.me/61413303718?text=Hi%20Data%20Pulses%2C%20I%20want%20a%20free%20tracking%20audit" target="_blank">
+        WhatsApp Us
+      </a>
+    </div>
+
+    <div class="micro">
+      No spam. Response within 24–48 hours.
+    </div>
+
   </div>
 
   <div class="grid">
 
     <div class="card">
       <h3>Tracking Infrastructure</h3>
-      <p>GA4, GTM and Meta Pixel fully configured with clean event tracking.</p>
+      <p>GA4, GTM and Meta Pixel configured with clean, reliable event tracking.</p>
     </div>
 
     <div class="card">
       <h3>Paid Advertising</h3>
-      <p>Meta & Google Ads optimized for real conversion data, not vanity metrics.</p>
+      <p>Meta & Google Ads optimized using real conversion data, not vanity metrics.</p>
     </div>
 
     <div class="card">
       <h3>Data Audit</h3>
-      <p>We identify missing tracking events and fix broken analytics setups.</p>
+      <p>We identify missing events, broken tracking and attribution gaps in your funnel.</p>
     </div>
 
   </div>
