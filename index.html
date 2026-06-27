@@ -3,19 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Data Pulses | Growth Advisory</title>
+<title>Data Pulses</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
 body{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter, system-ui, sans-serif;
   background:#0b0f14;
   color:#e5e7eb;
-  line-height:1.5;
 }
 
 /* NAV */
@@ -41,29 +38,84 @@ body{
   gap:10px;
 }
 
-.logo img{
-  height:22px;
-}
+.logo img{height:26px;}
 
 .logo span{
-  font-size:12px;
-  letter-spacing:2px;
+  font-size:13px;
+  letter-spacing:3px;
   text-transform:uppercase;
-  color:#cbd5e1;
+  color:#f1f5f9;
+  font-weight:600;
 }
 
-/* HERO (more compact, less empty space) */
-.hero{
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 42px;
+  background: #0f172a;
+  border: 1px solid #1f2937;
+  border-radius: 10px;
+  min-width: 180px;
+  z-index: 2000;
+}
+
+.dropdown-content a {
+  color: #cbd5e1;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+  font-size: 13px;
+}
+
+.dropdown-content a:hover {
+  background: #111827;
+  color: #3b82f6;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* LAYOUT */
+.container{
   max-width:900px;
   margin:0 auto;
-  padding:140px 24px 70px;
+  padding:120px 24px 60px;
+  text-align:left;
+}
+
+/* HERO */
+.hero{
+  padding-top:40px;
 }
 
 .hero h1{
-  font-size:46px;
-  margin:0 0 16px 0;
+  font-size:40px;
+  margin:0 0 14px 0;
   font-weight:500;
-  letter-spacing:-0.5px;
+  line-height:1.2;
+  letter-spacing:-0.3px;
 }
 
 .hero h1 span{
@@ -74,11 +126,12 @@ body{
   font-size:16px;
   color:#9ca3af;
   max-width:720px;
+  line-height:1.6;
 }
 
 /* CTA */
 .cta{
-  margin-top:22px;
+  margin-top:18px;
   display:flex;
   gap:12px;
   flex-wrap:wrap;
@@ -90,7 +143,11 @@ body{
   font-size:13px;
   font-weight:500;
   text-decoration:none;
-  display:inline-block;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
 }
 
 .primary{
@@ -110,21 +167,18 @@ body{
   color:#3b82f6;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-  max-width:900px;
-  margin:0 auto;
-  padding:50px 24px;
+  margin-top:70px;
 }
 
 h2{
-  font-size:18px;
-  font-weight:500;
+  font-size:16px;
+  font-weight:600;
   margin-bottom:16px;
-  color:#e5e7eb;
 }
 
-/* GRID tighter */
+/* GRID */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -136,6 +190,12 @@ h2{
   border:1px solid #1f2937;
   border-radius:10px;
   padding:16px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover{
+  transform: translateY(-4px);
+  border-color:#334155;
 }
 
 .card h3{
@@ -148,9 +208,10 @@ h2{
   font-size:13px;
   color:#9ca3af;
   margin:0;
+  line-height:1.5;
 }
 
-/* AUDIT */
+/* FORM */
 .audit{
   background:#0f172a;
   border:1px solid #1f2937;
@@ -185,7 +246,7 @@ button{
 
 button:hover{background:#2563eb;}
 
-/* FLOAT WHATSAPP */
+/* WHATSAPP */
 .wa{
   position:fixed;
   bottom:18px;
@@ -198,87 +259,129 @@ button:hover{background:#2563eb;}
   font-weight:600;
   text-decoration:none;
   z-index:2000;
+  transition: transform 0.2s ease;
 }
 
-/* subtle footer */
+.wa:hover{
+  transform: scale(1.05);
+}
+
+/* FOOTER */
 footer{
-  text-align:center;
-  padding:40px 20px;
+  text-align:left;
+  padding:60px 24px 30px;
   color:#6b7280;
   font-size:11px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* REVEAL ANIMATION */
+.reveal{
+  opacity:0;
+  transform: translateY(14px);
+  transition: all 0.6s ease;
+}
+
+.reveal.visible{
+  opacity:1;
+  transform: translateY(0);
+}
+
+html{
+  scroll-behavior:smooth;
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAV -->
 <div class="nav">
+
   <div class="logo">
     <img src="logo.png">
     <span>Data Pulses</span>
   </div>
+
+  <div class="dropdown">
+    <button class="dropbtn">Menu ▾</button>
+
+    <div class="dropdown-content">
+      <a href="#services">How we work</a>
+      <a href="#audit">Request review</a>
+    </div>
+  </div>
+
 </div>
 
-<div class="hero">
-  <h1>
-    Improve marketing performance through <span>clearer decision systems.</span>
-  </h1>
+<div class="container">
 
-  <p>
-    We help businesses understand what is driving or limiting their marketing performance, enabling more informed allocation of budget and improved commercial outcomes.
-  </p>
+  <!-- HERO -->
+  <div class="hero reveal">
+    <h1>
+      Improve marketing performance through <span>clearer decision-making.</span>
+    </h1>
 
-  <div class="cta">
-    <a class="btn primary" href="#audit">Request Audit</a>
-    <a class="btn secondary" href="#services">Overview</a>
+    <p>
+      We help businesses understand what is affecting their marketing outcomes and improve how budgets are allocated based on measurable performance signals.
+    </p>
+
+    <div class="cta">
+      <a class="btn primary" href="#audit">Request Audit</a>
+      <a class="btn secondary" href="#services">Overview</a>
+    </div>
   </div>
+
+  <!-- HOW WE WORK -->
+  <section id="services" class="reveal">
+    <h2>How we work with clients</h2>
+
+    <div class="grid">
+
+      <div class="card">
+        <h3>Diagnostic Review</h3>
+        <p>We assess your current marketing performance and identify structural inefficiencies affecting results.</p>
+      </div>
+
+      <div class="card">
+        <h3>Performance Clarity</h3>
+        <p>We clarify what is actually driving conversions and where budget is being misallocated.</p>
+      </div>
+
+      <div class="card">
+        <h3>Growth Alignment</h3>
+        <p>We align marketing activity with measurable business outcomes and revenue impact.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- AUDIT -->
+  <section id="audit" class="reveal">
+    <h2>Request Advisory Review</h2>
+
+    <div class="audit">
+
+      <form action="https://formspree.io/f/YOUR_ID" method="POST">
+
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="business" placeholder="Business type">
+
+        <textarea name="message" rows="4" placeholder="Context"></textarea>
+
+        <button type="submit">Submit</button>
+
+      </form>
+
+    </div>
+  </section>
+
 </div>
-
-<section id="services">
-  <h2>Focus Areas</h2>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Performance Review</h3>
-      <p>Structured analysis of marketing efficiency and conversion performance.</p>
-    </div>
-
-    <div class="card">
-      <h3>Decision Clarity</h3>
-      <p>Improving visibility across campaigns and attribution signals.</p>
-    </div>
-
-    <div class="card">
-      <h3>Growth Alignment</h3>
-      <p>Aligning marketing activity with measurable business outcomes.</p>
-    </div>
-
-  </div>
-</section>
-
-<section id="audit">
-  <h2>Request Advisory Review</h2>
-
-  <div class="audit">
-
-    <form action="https://formspree.io/f/YOUR_ID" method="POST">
-
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="text" name="business" placeholder="Business type">
-
-      <textarea name="message" rows="4" placeholder="Brief context"></textarea>
-
-      <button type="submit">Submit</button>
-
-    </form>
-
-  </div>
-</section>
 
 <a class="wa"
-   href="https://wa.me/61413303718?text=Hi%20Data%20Pulses"
+   href="https://wa.me/61413303718"
    target="_blank">
    WhatsApp
 </a>
@@ -286,6 +389,19 @@ footer{
 <footer>
   © 2026 Data Pulses
 </footer>
+
+<!-- SCROLL REVEAL -->
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
